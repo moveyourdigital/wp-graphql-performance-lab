@@ -1,12 +1,12 @@
 # WPGraphQL Performance Lab
-This plugin extends the [WPGraphQL](wp-graphql/wp-graphql) plugin to provide support for the [Performance Plugin](WordPress/performance), tipically the possibility to retrieve WebP versions of `srcSet` in `MediaItem` and the dominant color.
+This plugin extends the [WPGraphQL](https://github.com/wp-graphql/wp-graphql) plugin to provide support for the [Performance Plugin](https://github.com/WordPress/performance), tipically the possibility to retrieve WebP versions of `srcSet` in `MediaItem` and the dominant color.
 
 ### Requirements
 - PHP >= 7.2
 - WordPress >= 5.8
 
 ### Installation
-1. Install the [Performance Plugin](WordPress/performance) and [WPGraphQL](wp-graphql/wp-graphql)
+1. Install the [Performance Plugin](https://github.com/WordPress/performance) and [WPGraphQL](https://github.com/wp-graphql/wp-graphql)
 2. Upload the zip of this plugin to your WordPress plugins
 3. Activate all plugins
 
