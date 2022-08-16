@@ -5,7 +5,7 @@
  * Description: WPGraphQL plugin to support Performance Lab plugin features
  * Requires at least: 5.8
  * Requires PHP: 7.2
- * Version: 1.3.0
+ * Version: 1.3.1
  * Author: Move Your Digital
  * Author URI: https://moveyourdigital.com
  * License: GPL-3
@@ -89,7 +89,7 @@ add_action('graphql_register_types', function () {
         ),
         'resolve' => function (\WPGraphQL\Model\Post $source, array $args) {
           $meta = wp_get_attachment_metadata($source->databaseId);
-          $color = $meta['dominant_color'];
+          $color = isset($meta['dominant_color']) ? $meta['dominant_color'] : null;
 
           if (!$color) return null;
 
@@ -106,7 +106,7 @@ add_action('graphql_register_types', function () {
         'description' => __('Whether the image has transparent pixels.', 'wp-graphql-performance-lab'),
         'resolve'     => function (\WPGraphQL\Model\Post $source) {
           $meta = wp_get_attachment_metadata($source->databaseId);
-          return !!$meta['has_transparency'];
+          return isset($meta['has_transparency']) ? !!$meta['has_transparency'] : false;
         },
       ],
 
